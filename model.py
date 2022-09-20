@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pickle
-
+#pickling
 df=pd.read_csv(r'train_titanic.csv')
 df=df.drop(['Cabin','Name','Ticket','PassengerId'],axis=1)
 df['Fmembers']= df.iloc[:,4:6].sum(axis=1)
