@@ -18,13 +18,12 @@
          <h5.>Please use- Ticket class(1,2,3),Port of Embarkation(0,1,2) </h5.>
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Pclass" placeholder="Ticket class" required="required" />
+	<input type="text" name="Pclass" placeholder="Ticket class (1, 2, 3)" required="required" />
         <input type="text" name="Age" placeholder="Age" required="required" />
-		<input type="text" name="Fare" placeholder="Passenger fare" required="required" />
-		<input type="text" name="Embarked" placeholder="Port of Embarkation" required="required" />
- 		<input type="text" name="Fmembers" placeholder="No. of family members" required="required" />
- 		<input type="text" name="Sex_male" placeholder="Male or not" required="required" />
-
+	<input type="text" name="Fare" placeholder="Passenger fare" required="required" />
+	<input type="text" name="Embarked" placeholder="Port of Embarkation (0 = Southampton, 1 = Queenstown, 2 = Cherbourg)" required="required" />
+	<input type="text" name="Fmembers" placeholder="No. of family members" required="required" />
+	<input type="text" name="Sex_male" placeholder="Sex (Male=1, Female=0)" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
