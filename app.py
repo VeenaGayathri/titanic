@@ -19,8 +19,7 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
-    output = round(prediction[0], 2)
-
+    output = 'Alive' if round(prediction[0], 2)==1 else 'Not Alive'
     return render_template('index.html', prediction_text='Survival prediction {}'.format(output))
 
 @app.route('/predict_api',methods=['POST'])
